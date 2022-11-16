@@ -1,0 +1,17 @@
+.menuli{
+    display: block;
+   
+    clear: both;
+    font-weight: 400;
+    line-height: 1.538462;
+    color: #3f3f44;
+    white-space: nowrap;
+    padding: 5px 15px;
+    text-decoration: none;
+    
+}
+.menuli:hover{
+    background-color: #1c90fb;
+    color: #fff;
+    text-decoration: none;
+}
