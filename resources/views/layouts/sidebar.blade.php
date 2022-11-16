@@ -48,7 +48,7 @@
                     <li class="sidenav-item has-subnav ">
                         <a href="dashboard-1.html" aria-haspopup="true">
                             <span class="sidenav-icon icon icon-works">&#103;</span>
-                            <span class="sidenav-label">Seting</span>
+                            <span class="sidenav-label">Setting</span>
                         </a>
                         <ul class="sidenav level-2 collapse">
                             <li><a href="dashboard-2.html"> Backup Database</a></li>
