@@ -30,8 +30,8 @@
                         </a>
                         <ul class="sidenav level-2 collapse">
                             <li class="sidenav-heading">Technician</li>
-                            <li><a href="dashboard-2.html"> All Technician</a></li>
-                            <li><a href="dashboard-3.html">Create Technician</a></li>
+                            <li><a href="#"> All Technician</a></li>
+                            <li><a href="#">Create Technician</a></li>
                         </ul>
                     </li>
                     <li class="sidenav-item has-subnav ">
