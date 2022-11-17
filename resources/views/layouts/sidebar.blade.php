@@ -7,7 +7,7 @@
                     <li class="sidenav-search"></li>
                     <li class="sidenav-heading">Navigation</li>
                     <li class="sidenav-item active">
-                        <a href="page-layouts.html">
+                        <a href="{{ route('dashboard') }}">
                             <span class="sidenav-icon icon icon-works">&#71;</span>
                             <span class="sidenav-label">Dashboard</span>
                         </a>
@@ -20,7 +20,7 @@
                         <ul class="sidenav level-2 collapse">
                             <li class="sidenav-heading">Customer</li>
                             <li><a href="dashboard-2.html">All Customer</a></li>
-                            <li><a href="dashboard-3.html">Create Customer</a></li>
+                            <li><a href="{{ route('newcustomer') }}">Create Customer</a></li>
                         </ul>
                     </li>
                     <li class="sidenav-item has-subnav ">
