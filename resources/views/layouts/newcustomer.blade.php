@@ -8,15 +8,24 @@
                 
               </div>
               <div class="card-body">
-                @error('customer_name')
-                    <center><div class='text-danger errorstyle' >{{ $message }}</div></center>
-                @enderror
-                @error('customer_email')
-                <center><div class='text-danger errorstyle'>{{ $message }}</div></center>
-                @enderror
-                @error('customer_phone')
-                <center><div class='text-danger errorstyle'>{{ $message }}</div></center>
-                @enderror
+                
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if(session('success'))
+                <div class="alert alert-success">
+                    <strong>Success!</strong> New Customer Created.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
                 <form class="form-horizontal form-border" id="form" method="post" action="{{route('savecustomer')}}">
                     @csrf
                     <div class="form-group">

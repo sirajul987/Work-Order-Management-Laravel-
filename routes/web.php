@@ -36,6 +36,7 @@ Route::middleware([
         return view('layouts.newcustomer');
     })->name('newcustomer');
 });
+
 /* Save Customer */
 Route::middleware([
     'auth:sanctum',
