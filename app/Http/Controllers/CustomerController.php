@@ -17,6 +17,12 @@ class CustomerController extends Controller
             'customer_name' => 'required|unique:tbl_customer|max:255',
             'customer_phone' => 'required',
             'customer_email' => 'required',
-        ]);
+        ],
+        [
+            'customer_name.required' => 'Please Input Customer Name',
+            'customer_phone.required' => 'Please Input Customer Phone',
+            'customer_email.required' => 'Please Input Customer Email',
+        ]    
+    );
     }
 }
