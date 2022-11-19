@@ -5,15 +5,24 @@
               <div class="card">
               <div class="card-header">
                 <center><h3>Create New Customer</h3>    </center>
+                
               </div>
               <div class="card-body">
-                
+                @error('customer_name')
+                    <center><div class='text-danger errorstyle' >{{ $message }}</div></center>
+                @enderror
+                @error('customer_email')
+                <center><div class='text-danger errorstyle'>{{ $message }}</div></center>
+                @enderror
+                @error('customer_phone')
+                <center><div class='text-danger errorstyle'>{{ $message }}</div></center>
+                @enderror
                 <form class="form-horizontal form-border" id="form" method="post" action="{{route('savecustomer')}}">
                     @csrf
                     <div class="form-group">
                         <label class="col-sm-6 control-label">Customer Name </label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" name="txtCustomerName" placeholder="Enter customer name">
+                            <input type="text" class="form-control" name="customer_name" placeholder="Enter customer name">
                         </div>
                     </div>
                     <div class="form-group">
@@ -31,13 +40,13 @@
                     <div class="form-group">
                         <label class="col-sm-6 control-label">Phone Number</label>
                         <div class="col-sm-6">
-                            <input type="tel" class="form-control" required="" name="txtPhone"  placeholder="Enter Phone">
+                            <input type="tel" class="form-control"  name="customer_phone"  placeholder="Enter Phone">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-6 control-label">Email Address</label>
                         <div class="col-sm-6">
-                            <input type="email" class="form-control" required="" name="txtEmail"  placeholder="Enter Email">
+                            <input type="email" class="form-control"  name="customer_email"  placeholder="Enter Email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -58,6 +67,7 @@
                             <input type="checkbox" name="chkBackup" value="Y">
                         </div>
                     </div>
+                    
                     
                     <div class="form-group">
                         <div class="col-sm-offset-6 col-sm-6">
